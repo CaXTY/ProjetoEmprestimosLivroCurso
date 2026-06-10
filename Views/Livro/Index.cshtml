@@ -1,0 +1,85 @@
+﻿@using ProjetoEmprestimosLivroCurso.Models
+@model IEnumerable<LivroModel>
+
+@if (TempData["MensagemSucesso"] != null)
+{
+    <div class="alert alert-success text-dark" role="alert">
+        @TempData["MensagemSucesso"]
+    </div>
+}
+
+@if (TempData["MensagemErro"] != null)
+{
+    <div class="alert alert-danger text-dark" role="alert">
+        @TempData["MensagemErro"]
+    </div>
+}
+
+
+<div class="container mt-5">
+
+    <div class="btn-box d-flex justify-content-between align-items-center mb-3">
+
+        <h2>Cadastro de livros!</h2>
+        <a class="btn btn-success" asp-action="Cadastrar" asp-controller="Livro"><i class="bi bi-plus-circle"></i>  Cadastrar novo livro</a>
+    </div>
+
+    <table class="table table-hover" id="registros">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Titulo</th>
+                <th>Autor</th>
+                <th>Genero</th>
+                <th>Quantidade em Estoque</th>
+                <th>Data de cadastro</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @if (Model != null)
+            {
+                @if (Model.Count() > 0)
+                {
+                    @foreach (var livro in Model)
+                    {
+
+                        <tr>
+                            @if (livro.Capa != null)
+                            {
+                                <td>
+                                    <img src="imagem/@livro.Capa" style="width:50px; height: 50px" />
+                                </td>
+                            }
+                            else
+                            {
+                                <td>
+                                </td>
+                            }
+
+                            <td><i class="bi bi-people"></i>@livro.Titulo</td>
+                            <td>@livro.Autor</td>
+                            <td>@livro.Genero</td>
+                            <td><i class="bi bi-envelope-at"></i>@livro.QuantidadeEmEstoque</td>
+                            <td><i class="bi bi-calendar"></i>@livro.DataDeCadastro</td>
+                            <td>
+                                <a class="btn btn-warning" asp-action="Detalhes" asp-controller="Livro" asp-route-id="@livro.Id"><i class="bi bi-file-earmark-zip"></i>Detalhes</a>
+                                <a class="btn btn-info" asp-action="Editar" asp-controller="Livro" asp-route-id="@livro.Id"><i class="bi bi-pencil"></i>Editar</a>
+                            </td>
+                        </tr>
+                    }
+
+                }
+                else
+                {
+                    <tr><td colspan="6" class="text-center">Sem Livros Registrados!</td></tr>
+                }
+
+            }
+
+        </tbody>
+    </table>
+
+
+</div>

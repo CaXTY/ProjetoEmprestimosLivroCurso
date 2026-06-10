@@ -1,0 +1,93 @@
+﻿@using ProjetoEmprestimosLivroCurso.Models
+@model IEnumerable<LivroModel>
+
+@{
+    Layout = ViewBag.LayoutPagina;
+}
+
+@if (TempData["MensagemSucesso"] != null)
+{
+    <div class="alert alert-success text-dark" role="alert">
+        @TempData["MensagemSucesso"]
+    </div>
+}
+
+@if (TempData["MensagemErro"] != null)
+{
+    <div class="alert alert-danger text-dark" role="alert">
+        @TempData["MensagemErro"]
+    </div>
+}
+
+<div class="py-5">
+    <div class="container">
+
+        <div class="text-center mb-5">
+            <form method="get"
+                  asp-action="Index"
+                  asp-controller="Home"
+                  class="d-flex justify-content-center">
+
+                <input name="pesquisar"
+                       class="form-control w-50 mx-2"
+                       style="border:1px solid black; border-radius:10px"
+                       placeholder="Pesquisar livro..." />
+
+                <button type="submit"
+                        class="btn btn-primary"
+                        style="border-radius:10px">
+                    Pesquisar
+                </button>
+            </form>
+        </div>
+
+        @if (Model != null && Model.Any())
+        {
+            <div class="row">
+
+                @foreach (var livro in Model.Where(x => x.QuantidadeEmEstoque > 0))
+                {
+                    <div class="col-md-4 mb-4">
+
+                        <div class="card h-100">
+
+                            <img src="/imagem/@livro.Capa"
+                                 class="card-img-top"
+                                 style="height:250px; object-fit:cover;"
+                                 alt="@livro.Titulo" />
+
+                            <div class="card-body">
+
+                                <h5 class="card-title">
+                                    @livro.Titulo
+                                </h5>
+
+                                <p class="card-text">
+                                    @livro.Autor
+                                </p>
+
+                                <a asp-action="Detalhes"
+                                   asp-controller="Home"
+                                   asp-route-id="@livro.Id"
+                                   class="btn btn-primary w-100">
+                                    Detalhes
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                }
+
+            </div>
+        }
+        else
+        {
+            <div class="alert alert-warning text-center">
+                Nenhum livro encontrado.
+            </div>
+        }
+
+    </div>
+</div>

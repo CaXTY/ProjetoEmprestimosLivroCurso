@@ -1,0 +1,88 @@
+﻿@using ProjetoEmprestimosLivroCurso.Models
+@model IEnumerable<UsuarioModel>
+
+@if (TempData["MensagemSucesso"] != null)
+{
+    <div class="alert alert-success text-dark" role="alert">
+        @TempData["MensagemSucesso"]
+    </div>
+}
+
+@if (TempData["MensagemErro"] != null)
+{
+    <div class="alert alert-danger text-dark" role="alert">
+        @TempData["MensagemErro"]
+    </div>
+}
+
+
+<div class="container mt-5">
+
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2>Cadastro de Clientes!</h2>
+        <a asp-controller="Usuario" asp-action="Cadastrar" asp-route-id="0" class="btn-success btn"><i class="bi bi-plus-circle"></i>Cadastrar novo cliente</a>
+    </div>
+
+    <table class="table table-hover " id="registros">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Usuário</th>
+                <th>Nome</th>
+                <th>Estado</th>
+                <th>Email</th>
+                <th>Data de Criação</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @if (Model != null)
+            {
+                if (Model.Count() > 0)
+                {
+                    @foreach (var cliente in Model)
+                    {
+                        <tr>
+
+
+                            @if (cliente.Situacao == true)
+                            {
+                                <td>
+                                    <img src="~/img/Ativo.png" style="width: 25px; height: 25px" />
+                                </td>
+                            }
+                            else
+                            {
+                                <td>
+                                    <img src="~/img/Inativo.png" style="width: 25px; height: 25px" />
+                                </td>
+                            }
+
+
+                            <td>@cliente.Usuario</td>
+                            <td>@cliente.NomeCompleto</td>
+                            <td>@cliente.Endereco.Estado</td>
+                            <td>@cliente.Email</td>
+                            <td>@cliente.DataCadastro.ToString("dd-MM-yyyy")</td>
+                            <td>
+                                <a asp-controller="Usuario" asp-action="Detalhes" asp-route-id="@cliente.Id" class="btn-warning btn"><i class="bi bi-file-earmark-zip"></i>Detalhes</a>
+                                <a asp-controller="Usuario" asp-action="Editar" asp-route-id="@cliente.Id" class="btn-info btn"><i class="bi bi-pencil"></i>Editar</a>
+                            </td>
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr><td colspan="7" class="text-center">Sem Clientes Registrados!</td></tr>
+                }
+            }
+            else
+            {
+                <tr><td colspan="7" class="text-center">Sem Clientes Registrados!</td></tr>
+            }
+
+        </tbody>
+    </table>
+
+</div>

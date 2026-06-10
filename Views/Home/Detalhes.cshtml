@@ -1,0 +1,65 @@
+﻿@using ProjetoEmprestimosLivroCurso.Models
+@model EmprestimoModel
+
+@{
+    Layout = ViewBag.LayoutPagina;
+}
+
+
+<div class="container d-flex  gap-5 justify-content-center align-items-center mt-5">
+    <div class="img">
+        <img src="/Imagem/@Model.Livro.Capa" style="width:350px; height:550px; border-radius:10px" />
+    </div>
+    <div>
+        <h2 style="font-size:22px">@Model.Livro.Titulo</h2>
+        <h3>@Model.Livro.Autor</h3>
+        <p>@Model.Livro.Descricao</p>
+        <h5>Ano publicação: @Model.Livro.AnoPublicacao</h5>
+
+        <div>
+            <p>Quantidade em estoque: @Model.Livro.QuantidadeEmEstoque</p>
+
+            @if (Model.Usuario != null)
+            {
+                @if (Model.Usuario.Perfil == ProjetoEmprestimosLivroCurso.Enums.PerfilEnum.Cliente)
+                {
+                    @if (ViewBag.Emprestimos != "SemEmprestimos")
+                    {
+                        @if (Model.Usuario.Emprestimos
+                        .Where(emprestimo => emprestimo.LivroId == Model.LivroId
+                            && emprestimo.DataDevolucao == null
+                            && emprestimo.Usuario.Id == ViewBag.UsuarioLogado).Count() > 0)
+                        {
+                            <button class="btn btn-warn w-10" style=" border-radius:10px" disabled>
+                                Você já está com esse livro emprestado!
+                            </button>
+                        }
+                        else
+                        {
+                            <a class="btn btn-success w-10" style=" border-radius:10px" asp-action="Emprestar" asp-controller="Emprestimo" asp-route-id="@Model.Livro.Id">Emprestar</a>
+                        }
+                    }
+                    else
+                    {
+                        <a class="btn btn-success w-10" style=" border-radius:10px" asp-action="Emprestar" asp-controller="Emprestimo" asp-route-id="@Model.Livro.Id">Emprestar</a>
+                    }
+                }
+                else
+                {
+                    <a class="btn btn-success w-10" style=" border-radius:10px" asp-action="Detalhes" asp-controller="Livro" asp-route-id="@Model.Livro.Id">Verificar Detalhes</a>
+                }
+            }
+            else
+            {
+                <a class="btn btn-success w-10" style=" border-radius:10px" asp-action="Login" asp-controller="Home">
+                    É necessário estar logado para emprestar livros!
+                </a>
+            }
+
+            <a class="btn btn-primary w-10" style=" border-radius:10px" asp-action="Index" asp-controller="Home">
+                Voltar
+            </a>
+        </div>
+    </div>
+
+</div>

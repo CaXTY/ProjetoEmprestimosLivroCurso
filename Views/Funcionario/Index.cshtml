@@ -1,0 +1,88 @@
+﻿@using ProjetoEmprestimosLivroCurso.Models
+@model IEnumerable<UsuarioModel>
+
+@if (TempData["MensagemSucesso"] != null)
+{
+    <div class="alert alert-success text-dark" role="alert">
+        @TempData["MensagemSucesso"]
+    </div>
+}
+
+@if (TempData["MensagemErro"] != null)
+{
+    <div class="alert alert-danger text-dark" role="alert">
+        @TempData["MensagemErro"]
+    </div>
+}
+
+
+<div class="container mt-5">
+
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2>Cadastro de Funcionários!</h2>
+        <a asp-controller="Usuario" asp-action="Cadastrar" class="btn-success btn"><i class="bi bi-plus-circle"></i>Cadastrar novo funcionário</a>
+    </div>
+
+    <table class="table table-hover " id="registros">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Usuário</th>
+                <th>Nome</th>
+                <th>Estado</th>
+                <th>Email</th>
+                <th>Data de Criação</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @if (Model != null)
+            {
+                if (Model.Count() > 0)
+                {
+                    @foreach (var funcionario in Model)
+                    {
+                        <tr>
+
+
+                            @if (funcionario.Situacao == true)
+                            {
+                                <td>
+                                    <img src="~/img/Ativo.png" style="width: 25px; height: 25px" />
+                                </td>
+                            }
+                            else
+                            {
+                                <td>
+                                    <img src="~/img/Inativo.png" style="width: 25px; height: 25px" />
+                                </td>
+                            }
+
+
+                            <td>@funcionario.Usuario</td>
+                            <td>@funcionario.NomeCompleto</td>
+                            <td>@funcionario.Endereco.Estado</td>
+                            <td>@funcionario.Email</td>
+                            <td>@funcionario.DataCadastro.ToString("dd-MM-yyyy")</td>
+                            <td>
+                                <a asp-controller="Usuario" asp-action="Detalhes" asp-route-id="@funcionario.Id" class="btn-warning btn"><i class="bi bi-file-earmark-zip"></i>Detalhes</a>
+                                <a asp-controller="Usuario" asp-action="Editar" asp-route-id="@funcionario.Id" class="btn-info btn"><i class="bi bi-pencil"></i>Editar</a>
+                            </td>
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr><td colspan="7" class="text-center">Sem Funcionários Registrados!</td></tr>
+                }
+            }
+            else
+            {
+                <tr><td colspan="7" class="text-center">Sem Funcionários Registrados!</td></tr>
+            }
+
+        </tbody>
+    </table>
+
+</div>
