@@ -7,7 +7,7 @@ namespace ProjetoEmprestimosLivroCurso.Models
         [Key]
         public int Id { get; set; }
         [Required]
-        public string Titulo { get; set; }  
+        public string Titulo { get; set; } = string.Empty;
         [Required]
         public string Descricao { get; set; } = string.Empty;
         [Required]
@@ -20,10 +20,10 @@ namespace ProjetoEmprestimosLivroCurso.Models
         public string Genero { get; set; } = string.Empty;
         [Required]
         public int AnoPublicacao { get; set; }
+        public List<EmprestimoModel> Emprestimos { get; set; }
         [Required]
         public int QuantidadeEmEstoque { get; set; }
         public DateTime DataDeCadastro { get; set; } = DateTime.Now;
         public DateTime DataDeAlteracao { get; set; } = DateTime.Now;
-
     }
 }

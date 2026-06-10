@@ -13,7 +13,7 @@ namespace ProjetoEmprestimosLivroCurso.Models
         [JsonIgnore]
         public LivroModel Livro { get; set; }
         public DateTime DataEmprestimo { get; set; } = DateTime.Now;
-        public DateTime DataDevolucao { get; set; }
+        public DateTime? DataDevolucao { get; set; }
 
     }
 }

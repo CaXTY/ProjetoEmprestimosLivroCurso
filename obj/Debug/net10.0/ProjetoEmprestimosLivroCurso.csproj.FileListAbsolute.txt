@@ -1,3 +1,12 @@
+E:\CURSOS\CRISCURSOS\C#\ProjetoEmprestimosLivroCurso\ProjetoEmprestimosLivroCurso\obj\Debug\net10.0\ProjetoEmprestimosLivroCurso.csproj.AssemblyReference.cache
+E:\CURSOS\CRISCURSOS\C#\ProjetoEmprestimosLivroCurso\ProjetoEmprestimosLivroCurso\obj\Debug\net10.0\rpswa.dswa.cache.json
+E:\CURSOS\CRISCURSOS\C#\ProjetoEmprestimosLivroCurso\ProjetoEmprestimosLivroCurso\obj\Debug\net10.0\ProjetoEmprestimosLivroCurso.GeneratedMSBuildEditorConfig.editorconfig
+E:\CURSOS\CRISCURSOS\C#\ProjetoEmprestimosLivroCurso\ProjetoEmprestimosLivroCurso\obj\Debug\net10.0\ProjetoEmprestimosLivroCurso.AssemblyInfoInputs.cache
+E:\CURSOS\CRISCURSOS\C#\ProjetoEmprestimosLivroCurso\ProjetoEmprestimosLivroCurso\obj\Debug\net10.0\ProjetoEmprestimosLivroCurso.AssemblyInfo.cs
+E:\CURSOS\CRISCURSOS\C#\ProjetoEmprestimosLivroCurso\ProjetoEmprestimosLivroCurso\obj\Debug\net10.0\ProjetoEmprestimosLivroCurso.csproj.CoreCompileInputs.cache
+E:\CURSOS\CRISCURSOS\C#\ProjetoEmprestimosLivroCurso\ProjetoEmprestimosLivroCurso\obj\Debug\net10.0\ProjetoEmprestimosLivroCurso.MvcApplicationPartsAssemblyInfo.cache
+E:\CURSOS\CRISCURSOS\C#\ProjetoEmprestimosLivroCurso\ProjetoEmprestimosLivroCurso\obj\Debug\net10.0\ProjetoEmprestimosLivroCurso.RazorAssemblyInfo.cache
+E:\CURSOS\CRISCURSOS\C#\ProjetoEmprestimosLivroCurso\ProjetoEmprestimosLivroCurso\obj\Debug\net10.0\ProjetoEmprestimosLivroCurso.RazorAssemblyInfo.cs
 E:\CURSOS\CRISCURSOS\C#\ProjetoEmprestimosLivroCurso\ProjetoEmprestimosLivroCurso\bin\Debug\net10.0\appsettings.Development.json
 E:\CURSOS\CRISCURSOS\C#\ProjetoEmprestimosLivroCurso\ProjetoEmprestimosLivroCurso\bin\Debug\net10.0\appsettings.json
 E:\CURSOS\CRISCURSOS\C#\ProjetoEmprestimosLivroCurso\ProjetoEmprestimosLivroCurso\bin\Debug\net10.0\ProjetoEmprestimosLivroCurso.staticwebassets.runtime.json
@@ -135,15 +144,6 @@ E:\CURSOS\CRISCURSOS\C#\ProjetoEmprestimosLivroCurso\ProjetoEmprestimosLivroCurs
 E:\CURSOS\CRISCURSOS\C#\ProjetoEmprestimosLivroCurso\ProjetoEmprestimosLivroCurso\bin\Debug\net10.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
 E:\CURSOS\CRISCURSOS\C#\ProjetoEmprestimosLivroCurso\ProjetoEmprestimosLivroCurso\bin\Debug\net10.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
 E:\CURSOS\CRISCURSOS\C#\ProjetoEmprestimosLivroCurso\ProjetoEmprestimosLivroCurso\bin\Debug\net10.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
-E:\CURSOS\CRISCURSOS\C#\ProjetoEmprestimosLivroCurso\ProjetoEmprestimosLivroCurso\obj\Debug\net10.0\ProjetoEmprestimosLivroCurso.csproj.AssemblyReference.cache
-E:\CURSOS\CRISCURSOS\C#\ProjetoEmprestimosLivroCurso\ProjetoEmprestimosLivroCurso\obj\Debug\net10.0\rpswa.dswa.cache.json
-E:\CURSOS\CRISCURSOS\C#\ProjetoEmprestimosLivroCurso\ProjetoEmprestimosLivroCurso\obj\Debug\net10.0\ProjetoEmprestimosLivroCurso.GeneratedMSBuildEditorConfig.editorconfig
-E:\CURSOS\CRISCURSOS\C#\ProjetoEmprestimosLivroCurso\ProjetoEmprestimosLivroCurso\obj\Debug\net10.0\ProjetoEmprestimosLivroCurso.AssemblyInfoInputs.cache
-E:\CURSOS\CRISCURSOS\C#\ProjetoEmprestimosLivroCurso\ProjetoEmprestimosLivroCurso\obj\Debug\net10.0\ProjetoEmprestimosLivroCurso.AssemblyInfo.cs
-E:\CURSOS\CRISCURSOS\C#\ProjetoEmprestimosLivroCurso\ProjetoEmprestimosLivroCurso\obj\Debug\net10.0\ProjetoEmprestimosLivroCurso.csproj.CoreCompileInputs.cache
-E:\CURSOS\CRISCURSOS\C#\ProjetoEmprestimosLivroCurso\ProjetoEmprestimosLivroCurso\obj\Debug\net10.0\ProjetoEmprestimosLivroCurso.MvcApplicationPartsAssemblyInfo.cache
-E:\CURSOS\CRISCURSOS\C#\ProjetoEmprestimosLivroCurso\ProjetoEmprestimosLivroCurso\obj\Debug\net10.0\ProjetoEmprestimosLivroCurso.RazorAssemblyInfo.cache
-E:\CURSOS\CRISCURSOS\C#\ProjetoEmprestimosLivroCurso\ProjetoEmprestimosLivroCurso\obj\Debug\net10.0\ProjetoEmprestimosLivroCurso.RazorAssemblyInfo.cs
 E:\CURSOS\CRISCURSOS\C#\ProjetoEmprestimosLivroCurso\ProjetoEmprestimosLivroCurso\obj\Debug\net10.0\rjimswa.dswa.cache.json
 E:\CURSOS\CRISCURSOS\C#\ProjetoEmprestimosLivroCurso\ProjetoEmprestimosLivroCurso\obj\Debug\net10.0\rjsmrazor.dswa.cache.json
 E:\CURSOS\CRISCURSOS\C#\ProjetoEmprestimosLivroCurso\ProjetoEmprestimosLivroCurso\obj\Debug\net10.0\rjsmcshtml.dswa.cache.json
@@ -213,6 +213,8 @@ E:\CURSOS\CRISCURSOS\C#\ProjetoEmprestimosLivroCurso\ProjetoEmprestimosLivroCurs
 E:\CURSOS\CRISCURSOS\C#\ProjetoEmprestimosLivroCurso\ProjetoEmprestimosLivroCurso\obj\Debug\net10.0\compressed\y8s72y1m39-{0}-muycvpuwrr-muycvpuwrr.gz
 E:\CURSOS\CRISCURSOS\C#\ProjetoEmprestimosLivroCurso\ProjetoEmprestimosLivroCurso\obj\Debug\net10.0\compressed\7w1f6ac855-{0}-87fc7y1x7t-87fc7y1x7t.gz
 E:\CURSOS\CRISCURSOS\C#\ProjetoEmprestimosLivroCurso\ProjetoEmprestimosLivroCurso\obj\Debug\net10.0\compressed\2t1rp85lcv-{0}-mlv21k5csn-mlv21k5csn.gz
+E:\CURSOS\CRISCURSOS\C#\ProjetoEmprestimosLivroCurso\ProjetoEmprestimosLivroCurso\obj\Debug\net10.0\compressed\gpv4zq19m8-{0}-fb2vfdhebi-fb2vfdhebi.gz
+E:\CURSOS\CRISCURSOS\C#\ProjetoEmprestimosLivroCurso\ProjetoEmprestimosLivroCurso\obj\Debug\net10.0\compressed\k3lhi4ptno-{0}-fb2vfdhebi-fb2vfdhebi.gz
 E:\CURSOS\CRISCURSOS\C#\ProjetoEmprestimosLivroCurso\ProjetoEmprestimosLivroCurso\obj\Debug\net10.0\staticwebassets.build.json
 E:\CURSOS\CRISCURSOS\C#\ProjetoEmprestimosLivroCurso\ProjetoEmprestimosLivroCurso\obj\Debug\net10.0\staticwebassets.build.json.cache
 E:\CURSOS\CRISCURSOS\C#\ProjetoEmprestimosLivroCurso\ProjetoEmprestimosLivroCurso\obj\Debug\net10.0\staticwebassets.development.json
@@ -225,5 +227,3 @@ E:\CURSOS\CRISCURSOS\C#\ProjetoEmprestimosLivroCurso\ProjetoEmprestimosLivroCurs
 E:\CURSOS\CRISCURSOS\C#\ProjetoEmprestimosLivroCurso\ProjetoEmprestimosLivroCurso\obj\Debug\net10.0\ProjetoEmprestimosLivroCurso.pdb
 E:\CURSOS\CRISCURSOS\C#\ProjetoEmprestimosLivroCurso\ProjetoEmprestimosLivroCurso\obj\Debug\net10.0\ProjetoEmprestimosLivroCurso.genruntimeconfig.cache
 E:\CURSOS\CRISCURSOS\C#\ProjetoEmprestimosLivroCurso\ProjetoEmprestimosLivroCurso\obj\Debug\net10.0\ref\ProjetoEmprestimosLivroCurso.dll
-E:\CURSOS\CRISCURSOS\C#\ProjetoEmprestimosLivroCurso\ProjetoEmprestimosLivroCurso\obj\Debug\net10.0\compressed\gpv4zq19m8-{0}-fb2vfdhebi-fb2vfdhebi.gz
-E:\CURSOS\CRISCURSOS\C#\ProjetoEmprestimosLivroCurso\ProjetoEmprestimosLivroCurso\obj\Debug\net10.0\compressed\k3lhi4ptno-{0}-fb2vfdhebi-fb2vfdhebi.gz

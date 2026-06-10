@@ -1,0 +1,59 @@
+﻿@using ProjetoEmprestimosLivroCurso.Models
+@model UsuarioModel
+
+<a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Empréstimos Livro</a>
+
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+</button>
+<div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+    <ul class="navbar-nav flex-grow-1">
+        <li class="nav-item">
+            <a class="nav-link" asp-controller="Home" asp-action="Index">Página Inicial</a>
+        </li>
+    </ul>
+    <ul class="navbar-nav navbar-right">
+        <li class="nav-item dropdown">
+            @if (Model != null && Model.Perfil != ProjetoEmprestimosLivroCurso.Enums.PerfilEnum.Cliente)
+            {
+                <a class="nav-link dropp-toggle" href="#" data-bs-toggle="dropdown">
+                    Painel Administrativo
+                    <span class="caret"></span>
+                </a>
+
+                <ul class="dropdown-menu flex-grow-1 bg-primary">
+                    <li><a class="nav-link dropdown-item text-light" asp-controller="Funcionario" asp-action="Index">Usuários</a></li>
+                    <li><a class="nav-link dropdown-item text-light" asp-controller="Cliente" asp-action="Index" asp-route-id="0">Clientes</a></li>
+                    <div class="dropdown-divides"></div>
+                    <li><a class="nav-link dropdown-item text-light" asp-controller="Livro" asp-action="Index">Livros</a></li>
+                    <div class="dropdown-divides"></div>
+                    <li><a class="nav-link dropdown-item text-light" asp-controller="Relatorio" asp-action="Index">Relatórios</a></li>
+                </ul>
+
+            }
+
+        </li>
+
+        @if (Model != null && Model.Perfil == ProjetoEmprestimosLivroCurso.Enums.PerfilEnum.Cliente)
+        {
+            <li>
+                <a class="nav-link" asp-controller="Cliente" asp-action="Perfil">Meu Perfil</a>
+            </li>
+        }
+
+
+
+        <li>
+            @if (Model != null)
+            {
+                <a class="nav-link" asp-controller="Home" asp-action="Sair">Sair</a>
+            }
+            else
+            {
+                <a class="nav-link" asp-controller="Home" asp-action="Login">Login</a>
+            }
+
+        </li>
+    </ul>
+</div>

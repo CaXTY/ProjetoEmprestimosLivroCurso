@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using ProjetoEmprestimosLivroCurso.Dto.Endereco;
 using ProjetoEmprestimosLivroCurso.Dto.Livro;
 using ProjetoEmprestimosLivroCurso.Models;
 
@@ -13,6 +14,8 @@ namespace ProjetoEmprestimosLivroCurso.Profiles
             CreateMap<LivroCriacaoDto, LivroModel>();
             CreateMap<LivroModel, LivroEdicaoDto>();
             CreateMap<LivroEdicaoDto, LivroModel>();
+            CreateMap<EnderecoModel, EnderecoEditarDto>();
+            CreateMap<EnderecoEditarDto, EnderecoModel>();
         }
     }
 }

@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using ProjetoEmprestimosLivroCurso.Data;
 using ProjetoEmprestimosLivroCurso.Services.Autenticacao;
+using ProjetoEmprestimosLivroCurso.Services.EmprestimoService;
 using ProjetoEmprestimosLivroCurso.Services.HomeService;
 using ProjetoEmprestimosLivroCurso.Services.LivroService;
 using ProjetoEmprestimosLivroCurso.Services.SessaoService;
@@ -30,6 +31,7 @@ builder.Services.AddScoped<IUsuarioInterface, UsuarioService>();
 builder.Services.AddScoped<IAutenticacaoInterface, AutenticacaoService>();
 builder.Services.AddScoped<ISessaoInterface, SessaoService>();
 builder.Services.AddScoped<IHomeInterface, HomeService>();
+builder.Services.AddScoped<IEmprestimoInterface, EmprestimoService>();
 // AutoMapper
 builder.Services.AddAutoMapper(cfg => { }, AppDomain.CurrentDomain.GetAssemblies());
 
