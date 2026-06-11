@@ -34,6 +34,7 @@ namespace ProjetoEmprestimosLivroCurso.Controllers
             {
                 ViewBag.Perfil = PerfilEnum.Cliente;
             }
+
             return View();
         }
 
@@ -86,16 +87,17 @@ namespace ProjetoEmprestimosLivroCurso.Controllers
         [HttpPost]
         public async Task<ActionResult> Cadastrar(UsuarioCriacaoDto usuarioCriacaoDto)
         {
+            ViewBag.Perfil = usuarioCriacaoDto.Perfil;
+            ViewBag.Id = 0;
+
             if (ModelState.IsValid)
             {
-
                 if (!await _usuarioInterface.VerificaSeExisteUsuarioEEmail(usuarioCriacaoDto))
                 {
                     TempData["MensagemErro"] = "Já existe email/usuário cadastrado!";
                     return View(usuarioCriacaoDto);
                 }
 
-                //Cadastrar usuário
                 var usuario = await _usuarioInterface.Cadastrar(usuarioCriacaoDto);
 
                 TempData["MensagemSucesso"] = "Cadastro realizado com sucesso!";
@@ -104,15 +106,12 @@ namespace ProjetoEmprestimosLivroCurso.Controllers
                 {
                     return RedirectToAction("Index", "Funcionario");
                 }
+
                 return RedirectToAction("Index", "Cliente", new { Id = "0" });
-
-
             }
-            else
-            {
-                TempData["MensagemErro"] = "Verifique os dados informados!";
-                return View(usuarioCriacaoDto);
-            }
+
+            TempData["MensagemErro"] = "Verifique os dados informados!";
+            return View(usuarioCriacaoDto);
         }
 
 
@@ -142,8 +141,6 @@ namespace ProjetoEmprestimosLivroCurso.Controllers
                 {
                     return RedirectToAction("Index", "Cliente", new { Id = "0" });
                 }
-
-
 
             }
             else
